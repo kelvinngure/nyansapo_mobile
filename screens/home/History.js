@@ -6,7 +6,7 @@ import styles from "../../styles/styles"
 const Searched = () => {
     return(
         <View>
-            <Text>Result</Text>
+            <Text>Results</Text>
         </View>
     )
 }
