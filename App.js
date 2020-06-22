@@ -2,42 +2,28 @@ import 'react-native-gesture-handler';
 import { Ionicons } from "@expo/vector-icons";
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
-import React, {useEffect} from 'react';
-import { StyleSheet, View} from 'react-native';
+import React, {useEffect, useReducer, useState} from 'react';
+import { StyleSheet, View, KeyboardAvoidingView} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import MainApp from "./components/MainApp"
+import { getToken, deleteToken, storeRefreshToken} from "./actions/TokenHandle"
+import {LineContext, LineProvider, LineConsumer} from "./contexts/LineContext"
 
+
+let initialState = {
+  line: false,
+  token: null,
+  user: null
+}
 
 export default function App() {
-  const [isLoadingComplete, setLoadingComplete] = React.useState(false);
-
-  useEffect(() => {
-     async function loadResourcesAndDataAsync() {
-      try {
-        SplashScreen.preventAutoHideAsync();
-
-        // Load fonts
-        await Font.loadAsync({
-          ...Ionicons.font,
-          Ionicons: require('@expo/vector-icons/Ionicons'),
-        });
-        
-      } catch (e) {
-        // We might want to provide this error information to an error reporting service
-        console.warn(e);
-      } finally {
-        setLoadingComplete(true);
-        SplashScreen.hideAsync();
-      }
-    }
-
-    loadResourcesAndDataAsync();
-  }, []);
 
   return (
     <NavigationContainer>
       <View style = {styles.container}>
-      <MainApp/>
+        <LineProvider value= {initialState}>
+          <MainApp/>
+        </LineProvider>
       </View>
     </NavigationContainer>
   );
