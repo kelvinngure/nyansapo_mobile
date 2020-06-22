@@ -35,5 +35,42 @@ export default StyleSheet.create({
         justifyContent: "space-between",
         width: 70,
         flexDirection: "row"
+    },
+    loginScreen: {
+        backgroundColor: "red",
+        flex: 1,
+        alignItems: "center"
+    },
+    authlogo: {
+        width: "50%",
+        height: "50%",
+        resizeMode: "contain"
+    },
+    logoView: {
+        width: "100%",
+        height: "40%",
+        alignItems: "center",
+        backgroundColor: "green",
+        justifyContent: "center"
+    },
+    inputView: {
+        width: "100%",
+        alignItems: "center",
+        backgroundColor: "yellow"
+    },
+    authInputs: {
+        backgroundColor: "green",
+        height: 60,
+        width: "90%",
+        marginVertical: 20
+    },
+    authButtonView: {
+
+    },
+    authButton: {
+
+    },
+    authButton: {
+        
     }
 })

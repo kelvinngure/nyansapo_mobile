@@ -1,16 +1,17 @@
 import React from "react"
-import { createStackNavigator } from '@react-navigation/stack';
 import BottomTab from "../navigation/BottomTab"
-import DrawerNav from "../navigation/DrawerNav"
 import {View} from "react-native"
 import styles from "../styles/styles"
-
-const Stack = createStackNavigator();
+import {LineContext, LineProvider, LineConsumer} from "../contexts/LineContext"
+import Auth from "./Auth"
 
 const MainApp = () => {
   return (
     <View style ={styles.mainapp}>
-      <DrawerNav/>
+      <LineConsumer>
+        {state => state.line ? <BottomTab/> : <Auth/>}
+      
+      </LineConsumer>
     </View>
   )
 }
