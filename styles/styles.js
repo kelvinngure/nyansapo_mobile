@@ -37,7 +37,7 @@ export default StyleSheet.create({
         flexDirection: "row"
     },
     loginScreen: {
-        backgroundColor: "red",
+        backgroundColor: Colors.appGrey,
         flex: 1,
         alignItems: "center"
     },
@@ -48,29 +48,82 @@ export default StyleSheet.create({
     },
     logoView: {
         width: "100%",
-        height: "40%",
+        height: "30%",
         alignItems: "center",
-        backgroundColor: "green",
+        backgroundColor: Colors.appLightBrown,
         justifyContent: "center"
     },
     inputView: {
         width: "100%",
         alignItems: "center",
-        backgroundColor: "yellow"
+        backgroundColor: Colors.appGrey,
+        marginBottom: 30
     },
     authInputs: {
-        backgroundColor: "green",
         height: 60,
         width: "90%",
-        marginVertical: 20
+        marginVertical: 20,
+        fontSize: 18,
+        borderBottomColor: Colors.appBrown,
+        borderBottomWidth: 1
     },
     authButtonView: {
-
+        flexDirection: "row",
+        backgroundColor: Colors.appGrey,
+        width: "100%",
+        height: "20%",
+        justifyContent: "center"
     },
     authButton: {
+        backgroundColor: Colors.appBrown,
+        height: 50,
+        width: 100,
+        justifyContent: "center",
+        alignItems: "center",
+        borderTopRightRadius: 5,
+        borderBottomRightRadius: 5
 
     },
-    authButton: {
-        
+    registerButton: {
+        backgroundColor: Colors.appBrown,
+        height: 50,
+        width: 200,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 5
+    },
+    authButtonText: {
+        color: Colors.appBrown,
+        fontSize: 16
+    },
+    signin: {
+        color: "white",
+        fontSize: 16
+    },
+    forgot: {
+        backgroundColor: Colors.appGrey,
+        height: 50,
+        width: 150,
+        justifyContent: "center",
+        alignItems: "center",
+        borderWidth: 2,
+        borderColor: Colors.appBrown,
+        borderBottomLeftRadius: 5,
+        borderTopLeftRadius: 5
+    },
+    nameinput: {
+        width: "100%",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        paddingHorizontal: 16
+    },
+    names: {
+        height: 60,
+        width: "40%",
+        marginVertical: 20,
+        fontSize: 18,
+        borderBottomColor: Colors.appBrown,
+        borderBottomWidth: 1,
+        paddingHorizontal: 16
     }
 })
