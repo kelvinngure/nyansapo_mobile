@@ -15,7 +15,7 @@ const Drawer = createDrawerNavigator();
 
 export default function DrawerNav() {
   return (
-      <Drawer.Navigator initialRouteName="Btab">
+      <Drawer.Navigator initialRouteName="Home">
         <Drawer.Screen name="Home" component={BottomTab}  options={{headerShown: false}}/>
         <Drawer.Screen name="Notifications" component={NotificationsScreen}  options={{headerShown: false}}/>
       </Drawer.Navigator>
