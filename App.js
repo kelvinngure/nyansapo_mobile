@@ -3,21 +3,20 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Font from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import React, {useEffect, useReducer, useState} from 'react';
-import { StyleSheet, View, KeyboardAvoidingView} from 'react-native';
+import { StyleSheet, View} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import MainApp from "./components/MainApp"
 import { getToken, deleteToken, storeRefreshToken} from "./actions/TokenHandle"
 import {LineContext, LineProvider, LineConsumer} from "./contexts/LineContext"
-
+import Colors from "./styles/Colors"
 
 let initialState = {
-  line: false,
+  line: true,
   token: null,
   user: null
 }
 
 export default function App() {
-
   return (
     <NavigationContainer>
       <View style = {styles.container}>
@@ -32,6 +31,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#8ff55b',
+    backgroundColor: Colors.appLightBrown
   },
 });
