@@ -11,11 +11,6 @@ const Header = ({navigation}) => {
         <View style = {styles.header}>
             <Menu/>
             <Text style = {styles.headerText}>nyansapo</Text>
-
-            <View style = {styles.icons}>
-                <TouchableOpacity onPress = {() => navigation.navigate("Create")}><Add /></TouchableOpacity>
-                <Search />
-            </View>
         </View>
     )
     
