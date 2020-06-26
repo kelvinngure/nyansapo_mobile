@@ -9,7 +9,19 @@ export default StyleSheet.create({
     },
     tabs: {
         flex: 1,
-        paddingLeft: 16
+        paddingHorizontal: 16,
+        paddingTop: 10,
+    },
+    homeCombine: {
+        flex: 1
+    },
+    hometab: {
+        flex: 1,
+        paddingHorizontal: 16,
+        paddingTop: 10,
+    },
+    results: {
+        flex: 1
     },
     header: {
         height: 60,
@@ -25,16 +37,18 @@ export default StyleSheet.create({
         color: Colors.blue,
         paddingLeft: 8,
     },
-    snake: {
-        paddingRight: 140
-    },
     history: {
         paddingLeft: 16
     },
     icons: {
-        justifyContent: "space-between",
+        justifyContent: "center",
+        alignItems: "center",
         width: 70,
-        flexDirection: "row"
+        flexDirection: "row",
+        position: "absolute",
+        right: 20,
+        bottom: 20
+
     },
     loginScreen: {
         backgroundColor: Colors.appGrey,
@@ -97,8 +111,8 @@ export default StyleSheet.create({
         fontSize: 16
     },
     signin: {
-        color: "white",
-        fontSize: 16
+        fontSize: 16,
+        color: "white"
     },
     forgot: {
         backgroundColor: Colors.appGrey,
