@@ -8,7 +8,7 @@ import {IconBar, Search, Menu, Add} from "../../styles/Icons"
 const Searched = () => {
     return(
         <View>
-            <Text>Resu</Text>
+            <Text>Results</Text>
         </View>
     )
 }
